@@ -1,0 +1,23 @@
+/* Colors: 
+
+light green - #8bc34a
+medium green - #689f38
+dark green - #33691e
+
+*/
+
+
+/* General */   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+}
