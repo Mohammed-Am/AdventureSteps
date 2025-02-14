@@ -1,0 +1,136 @@
+
+
+$color-primary:  #E6D5B8;
+$color-primary-light: #2C3E50;
+$color-primary-dark: #2B2B2B;
+
+$color-white: #fff;
+$color-gery-dark: #777;
+$color-black: #000;
+
+/* General */   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-gery-dark;
+
+}
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,  rgba($color-primary-light, 0.726), rgba($color-primary-dark, 0.7)),url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100%  0, 100% 75vh, 0 100%);
+
+}
+
+.logo-box{
+    position: absolute;
+    top: -30px;
+    left: 20px;
+}
+
+.logo{
+    max-width: 30%;  /* Scales with the header */
+    height: auto;
+    
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+    
+
+    &-main{
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 35px;
+    
+        /* animation-name: moveInLeft ;
+        animation-duration: 1s;
+        animation-timing-function: ease-out; */
+        animation: moveInRight 1s ease-out;
+    }
+
+    &-sub{
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 12.4px;
+      
+      }
+   
+}
+
+
+
+
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn{
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+        }
+
+        &:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+        }
+        &:active{
+            transform: translateX(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        }
+
+        &-white{
+            background-color: $color-white;
+            color: $color-gery-dark;
+        }
+
+}
+
+
